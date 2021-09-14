@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SafeHome</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 200;
+      }
+
+      header{
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        padding-left: 13%;
+        padding-right: 10%;
+        padding-top: 1%;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+      }
+
+      body{
+        min-height: 2500px;
+        margin: 0;
+      }
+
+      .headerName{
+        float: left;
+        width: 50%;
+      }
+      .headerInfo{
+        float: right;
+        width: 50%;
+        /* хз чо не 50% */
+        text-align: right;
+      }
+
+      .greenText{
+        color: green;
+        font-weight: 900;
+      }
+
+      .orangeText{
+        color: orange;
+        font-weight: 600;
+      }
+
+      .blueText{
+        color: rgb(0, 162, 255);
+        font-weight: 900;
+      }
+
+      .contentWithBack{
+        height: 600px;
+        width: 100%;
+        background-image:url(./fem1.png);
+        background-size: cover;
+
+        padding: 75px 10% 75px 13%;
+      }
+      /* main{
+        margin-top: 200px;
+      }?????????????????????????????????????????????? */
+      main{
+        position: relative;
+        top: 100px;
+      }
+
+      .contentWithBackText p:first-child{
+        font-size: 50px;
+        margin: 0;
+      }
+
+      .contentWithBackText p:last-child{
+        font-weight: 600;
+        font-size: 61px;
+        margin: 0;
+      }
+
+      .contentWithBackText{
+        color: white;
+        height: 100%;
+        padding-top: 12%;
+        float: left;
+        width: 60%;
+      }
+
+      .contentWithBackForm{
+        color: white;
+        height: 100%;
+        float: right;
+        width: 30%;
+        min-width: 300px;
+        background-color: rgb(41, 187, 41);
+        text-align: center;
+        padding: 20px;
+      }
+
+      .contentWithBackForm p{
+        margin-top: 2px;
+        font-size: 15px;
+      }
+
+      .contentWithBackForm h1{
+        margin:0;
+        font-weight: 700;
+      }
+
+      form{
+        width: 100%;
+      }
+
+      input{
+        width: 100%;
+        height: 45px;
+        margin-bottom: 10px;
+      }
+      .button1{
+        border: 0;
+        width: 100%;
+        height: 60px;
+        background-color: black;
+        color: white;
+        margin-top: 10px;
+      }
+      .buttonText{
+        font-size: 23px;
+      }
+
+      .content1{
+        height: 400px;
+        background-color: hsl(0, 0%, 91%);
+        padding: 75px 10% 75px 13%;
+      }
+
+      .pluses1, .pluses2, .pluses3{
+        float: left;
+        width: 30%;
+        height: 100%;
+        color: white;
+        padding: 20px;
+        overflow: auto;
+      }
+
+      .pluses1{
+        margin-right: 5%;
+        background-color: rgb(41, 187, 41);
+      }
+      .pluses2{
+        margin-right: 5%;
+        background-color: rgb(0, 174, 255);
+      }
+      .pluses3{
+        background-color: rgb(223, 145, 2);
+      }
+
+      .boltH{
+        font-weight: 900;
+      }
+
+      .content2{
+        height: 600px;
+        padding: 75px 10% 75px 13%;
+      }
+
+      .content2Info1, .content2Info2{
+        float: left;
+        width: 47.5%;
+        height: 100%;
+        color: black;
+        overflow: auto;
+      }
+
+      .content2Info1{
+        float: left;
+        margin-right: 5%;
+      }
+      .content2Info2{
+        float: right;
+      }
+      .img1{
+        height: 60%;
+        width: 100%;
+        background-image: url(./fem2.jpg);
+        background-size: cover;
+      }
+      .img2{
+        height: 60%;
+        width: 100%;
+        background-image: url(./fem3.jpeg);
+        background-size: cover;
+      }
+      p{
+        font-size: 17px;
+      }
+
+      .avatar{
+        display: block; 
+        width:  100px; 
+        margin: 0 auto;
+      }
+      .center{
+        text-align: center;
+      }
+
+      .fontSize22{
+        font-size: 22px;
+      }
+
+      .content3{
+        height: 450px;
+        padding: 75px 10% 75px 13%;
+      }
+
+      .content3_1, .content3_2{
+        width: 47.5%;
+        height: 100%;
+        float: left;
+      }
+
+      .content3_1{
+        margin-right: 5%;
+        background-image: url(./para1.jpg);
+        background-size: cover;
+      }
+      .content3_2 {
+        position:relative; 
+        padding-bottom:50px;
+      }
+      .content3_2 h1{
+        margin-top: 0;
+      }
+      .button2{
+        width: 288px;
+        height: 60px;
+        background-color: rgb(41, 187, 41);
+        color: white;
+        border: 0;
+        position: absolute; bottom: 0;
+      }
+
+      .content4{
+        height: 375px;
+        padding: 0 10% 75px 13%;
+        margin-bottom: 75px;
+      }
+
+      .content4_1 h1{
+        margin-top: 0;
+      }
+
+      .content4_1, .content4_2{
+        width: 47.5%;
+        height: 100%;
+        float: left;
+      }
+      .content4_1{
+        position:relative; 
+        padding-bottom:50px;
+      }
+      .content4_2{
+        margin-left: 5%;
+        background-image: url(./para2.jpeg);
+        background-size: cover;
+      }
+
+      .fotter{
+        width: 100%;
+        padding-top: 1%;
+        text-align: center;
+        background-color: hsl(0, 0%, 91%);
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="headerName">
+            <h1><span class="greenText">Home</span> <span class="orangeText">Insurance</span></h1>
+        </div>
+        <div class="headerInfo">
+            <h2>Any Questions? Call Us Today <span class="blueText">+1(800)456-7890</span></h2>
+        </div>
+      </header>
+
+      <main>
+        <div class="contentWithBack">
+            <div class="contentWithBackText">
+              <p>Refreshingly Straighforward</p>
+              <p>Home Insurance</p>
+            </div>
+            <div class="contentWithBackForm">
+              <h1>GET A QUOTE</h1>
+              <p>Lorem ipsdaafsum dolor, sidft amet cdsfonsefdctetur adipisicfing elifdt. 
+                Asperioes rerum saepe dolor?</p>
+              <form action="">
+                  <input type="text" placeholder="FULL NAME" required>
+                  <input type="text" placeholder="EMAIL ADRESS" required>
+                  <input type="text" placeholder="PHONE NUMBER" required>
+                  <input type="text" placeholder="ZIP CODE" required>
+                  <button class="button1"><span class="buttonText">CLICK HERE NOW</span></button>
+              </form>
+            </div>
+        </div>
+        <div class="content1">
+          <div class="pluses1">
+              <h1 class="boltH">Accessibility</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum unde optio id blanditiis odit delectus temporibus eaque ullam debitis earum modi aliquid. Dolorum unde optio id blanditiis. Dolorum unde optio id blanditiis.</p>
+          </div>
+          <div class="pluses2">
+            <h1 class="boltH">Guarantee</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum unde optio id blanditiis odit delectus temporibus eaque ullam</p>
+          </div>
+          <div class="pluses3">
+            <h1 class="boltH">Affilates</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum unde optio id blanditiis odit delectus temporibus eaque ullam debitis earum modi aliquid. Dolorum unde optio id blanditiis.</p>
+          </div>
+        </div>
+        <div class="content2">
+            <div class="content2Info1">
+              <div class="img1"></div>
+              <h1 class="boltH">Plan that suits YOUR needs</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error dicta aliquid architecto, veniam molestiae aut accusamus nulla ut consequatur quibusdam numquam nemo quis neque quos!</p>
+            </div>
+            <div class="content2Info2">
+              <div class="img2"></div>
+              <h1 class="boltH">Pay Less & Get More</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error dicta aliquid architecto, veniam molestiae aut accusamus nulla ut consequatur quibusdam numquam nemo quis neque quos!</p>
+            </div>
+        </div>
+        <div class="content1">
+          <img class="avatar" src="./avatar.png" alt="">
+          <p class="center boltH fontSize22">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet est distinctio, quas quisquam nesciunt, perspiciatis magnam aliquid illum non natus pariatur sit maiores error dolores, sint iste earum dolor reiciendis?"</p>
+          <h3 class="blueText center">KELVIN SMITH</h3>
+        </div>
+        <div class="content3">
+          <div class="content3_1"></div>
+          <div class="content3_2">
+            <h1 class="boltH">Let Us Do The Work For You</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error dicta aliquid architecto, veniam molestiae aut accusamus nulla ut consequatur quibusdam numquam nemo quis neque quos! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button class="button2"><span class="buttonText">GET A QOUTE</span></button>
+          </div>
+        </div>
+        <div class="content4">
+          <div class="content4_1">
+            <h1 class="boltH">Protect Your Home</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error dicta aliquid architecto, veniam molestiae aut accusamus nulla ut consequatur quibusdam numquam nemo quis neque quos! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button class="button2"><span class="buttonText">GET A QOUTE</span></button>
+          </div>
+          <div class="content4_2"></div>
+        </div>
+      </main>
+      <footer>
+        <div class="fotter">
+        <p>Copyriting 2020-2021. All Rights Reserved | Designed by: KRR</p>
+      </div>
+      </footer>
+    </div>
+  </body>
+</html>
